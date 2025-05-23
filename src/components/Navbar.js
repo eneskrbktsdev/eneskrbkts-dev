@@ -1,30 +1,36 @@
 import React, { useState } from "react";
 import "./Navbar.css";
 
-function Navbar({ setActivePage }) {
-  const [portfolioOpen, setPortfolioOpen] = useState(false);
+const Navbar = () => {
+  const [menuOpen, setMenuOpen] = useState(false);
+
+  const scrollToSection = (id) => {
+    const section = document.getElementById(id);
+    if (section) {
+      section.scrollIntoView({ behavior: "smooth" });
+      setMenuOpen(false);
+    }
+  };
 
   return (
-    <nav className="navbar">
-      <div className="navbar-logo">EK</div>
-      <ul className="navbar-links">
-        <li onClick={() => setActivePage("anasayfa")}>Ana Sayfa</li>
-        <li onClick={() => setActivePage("hakkimda")}>Hakkımda</li>
-        <li onClick={() => setActivePage("yetenekler")}>Neler Yapabilirim?</li>
-        <li
-          onMouseEnter={() => setPortfolioOpen(true)}
-          onMouseLeave={() => setPortfolioOpen(false)}
-          className="portfolio-parent"
-        >
-          <span onClick={() => setActivePage("projelerim")}>Portfolyo</span>
-          <div className={`dropdown ${portfolioOpen ? "open" : ""}`}>
-            <div onClick={() => setActivePage("projelerim")}>Projelerim</div>
-          </div>
-        </li>
-        <li onClick={() => setActivePage("iletisim")}>İletişim</li>
+    <nav className={`navbar ${menuOpen ? "open" : ""}`}>
+      <div className="navbar__logo" onClick={() => scrollToSection("anasayfa")}>
+        eneskarabektas<span className="dot">.</span>
+      </div>
+      <div className="navbar__toggle" onClick={() => setMenuOpen(!menuOpen)}>
+        <span className="navbar__bar"></span>
+        <span className="navbar__bar"></span>
+        <span className="navbar__bar"></span>
+      </div>
+      <ul className={`navbar__links ${menuOpen ? "show" : ""}`}>
+        <li onClick={() => scrollToSection("anasayfa")}>Anasayfa</li>
+        <li onClick={() => scrollToSection("hakkimda")}>Hakkımda</li>
+        <li onClick={() => scrollToSection("yetenekler")}>Yetenekler</li>
+        <li onClick={() => scrollToSection("projelerim")}>Projelerim</li> {/* Düzeltildi */}
+        <li onClick={() => scrollToSection("iletisim")}>İletişim</li>
       </ul>
     </nav>
   );
-}
+};
 
 export default Navbar;

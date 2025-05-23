@@ -1,0 +1,49 @@
+.yetenekler {
+  background: #232323;
+  border-radius: 22px;
+  margin: 36px 0;
+  box-shadow: 0 6px 32px rgba(33,33,33,0.12);
+  padding: 38px 6vw 30px 6vw;
+}
+.yetenekler-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 32px;
+  justify-content: flex-start;
+}
+.yet-card {
+  min-width: 220px;
+  flex: 1;
+  background: #181818;
+  border-radius: 18px;
+  padding: 22px 18px 18px 18px;
+  box-shadow: 0 3px 10px rgba(255,169,77,0.04);
+  margin-bottom: 8px;
+  max-width: 310px;
+}
+.yet-header {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 7px;
+  color: #E0E0E0;
+  font-size: 1.07rem;
+  font-weight: 500;
+}
+.progress-bar {
+  width: 100%;
+  background: #2b2b2b;
+  height: 12px;
+  border-radius: 8px;
+  overflow: hidden;
+}
+.progress {
+  height: 100%;
+  background: linear-gradient(90deg, #FFA94D 60%, #ffb871 100%);
+  border-radius: 8px;
+  transition: width 0.7s cubic-bezier(.61,1,.88,1);
+  box-shadow: 0 1px 8px #FFA94D55;
+}
+@media (max-width: 700px) {
+  .yetenekler-list { flex-direction: column; gap: 18px;}
+  .yetenekler { padding: 18px 3vw 16px 3vw; }
+}

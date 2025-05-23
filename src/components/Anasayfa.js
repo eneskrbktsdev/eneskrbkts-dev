@@ -1,14 +1,30 @@
 import React from "react";
+import "./Anasayfa.css";
 
-function Anasayfa() {
+const Anasayfa = () => {
+  // Projelere göz at butonuna tıklayınca projelerim bölümüne kaydırır
+  const handleGoToProjects = () => {
+    const projelerimSection = document.getElementById("projelerim");
+    if (projelerimSection) {
+      projelerimSection.scrollIntoView({ behavior: "smooth" });
+    }
+  };
+
   return (
-    <section className="section anasayfa">
-      <h1>Enes Karabektaş</h1>
+    <div className="anasayfa-container">
+      <h1>
+        Merhaba, ben <span className="highlight">Enes Karabektaş</span>
+      </h1>
+      <h2>Bilgisayar Mühendisliği Son Sınıf Öğrencisi</h2>
       <p>
-        Merhaba, portfolyo siteme hoş geldiniz!
-        <br />Yazılım geliştirme, oyun programlama ve otomasyon sistemleriyle ilgileniyorum.
+        Oyun ve yazılım otomasyonuna ilgim var.<br />
+        İnternet otomasyonları ve küçük ölçekli uygulamalar geliştirmekteyim.
       </p>
-    </section>
+      <button className="go-to-projects-btn" onClick={handleGoToProjects}>
+        Projelerime Göz At
+      </button>
+    </div>
   );
-}
+};
+
 export default Anasayfa;

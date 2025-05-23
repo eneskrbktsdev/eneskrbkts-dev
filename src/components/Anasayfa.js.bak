@@ -1,0 +1,20 @@
+import React from "react";
+import "./Anasayfa.css";
+
+const Anasayfa = () => {
+  return (
+    <section id="anasayfa" className="anasayfa">
+      <div className="hero-inner">
+        <h1>Merhaba, ben <span className="accent">Enes Karabektaş</span></h1>
+        <h2 className="hero-sub">Bilgisayar Mühendisliği Son Sınıf Öğrencisi</h2>
+        <p className="hero-desc">
+          Oyun ve yazılım otomasyonuna ilgim var.<br />
+          İnternet otomasyonları ve küçük ölçekli uygulamalar geliştirmekteyim.
+        </p>
+        <a href="#projeler" className="hero-btn">Projelerime Göz At</a>
+      </div>
+    </section>
+  );
+};
+
+export default Anasayfa;

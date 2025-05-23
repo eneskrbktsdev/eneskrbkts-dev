@@ -1,0 +1,101 @@
+.iletisim {
+  background: #232323;
+  border-radius: 22px;
+  margin: 36px 0 52px 0;
+  box-shadow: 0 6px 32px rgba(33,33,33,0.14);
+  padding: 40px 6vw 30px 6vw;
+}
+.iletisim-content {
+  display: flex;
+  gap: 52px;
+  flex-wrap: wrap;
+  align-items: flex-start;
+}
+.iletisim-form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  min-width: 260px;
+  flex: 1;
+}
+.iletisim-form input,
+.iletisim-form textarea {
+  background: #181818;
+  border: 2px solid #FFA94D33;
+  border-radius: 12px;
+  color: #E0E0E0;
+  padding: 11px 14px;
+  font-size: 1.07rem;
+  font-family: inherit;
+  resize: none;
+  outline: none;
+  transition: border-color .2s, box-shadow .2s;
+}
+.iletisim-form input:focus,
+.iletisim-form textarea:focus {
+  border-color: #FFA94D;
+  box-shadow: 0 2px 9px #FFA94D21;
+}
+.iletisim-form textarea {
+  min-height: 96px;
+  max-height: 210px;
+}
+.gonder-btn {
+  background: #FFA94D;
+  color: #212121;
+  padding: 10px 27px;
+  border-radius: 21px;
+  font-size: 1.08rem;
+  font-weight: 600;
+  border: none;
+  cursor: pointer;
+  align-self: flex-end;
+  transition: background .2s, color .2s, transform .14s;
+  box-shadow: 0 1px 8px #FFA94D40;
+}
+.gonder-btn:hover {
+  background: #E0E0E0;
+  color: #FFA94D;
+  transform: scale(1.03);
+}
+.success-msg {
+  color: #FFA94D;
+  font-weight: 500;
+  margin-top: 10px;
+}
+.iletisim-links {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  font-size: 1.12rem;
+  min-width: 220px;
+  padding-top: 12px;
+}
+.iletisim-links a {
+  color: #FFA94D;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-weight: 500;
+  transition: color .16s;
+}
+.iletisim-links a:hover:not(.disable-link) {
+  color: #E0E0E0;
+}
+.disable-link {
+  pointer-events: none;
+  opacity: 0.46;
+}
+.mail-link {
+  color: #E0E0E0;
+  font-size: 1.05rem;
+}
+.mail-link span {
+  color: #FFA94D;
+  font-weight: 600;
+}
+@media (max-width: 700px) {
+  .iletisim-content { flex-direction: column; gap: 20px;}
+  .iletisim { padding: 22px 3vw 18px 3vw; }
+}

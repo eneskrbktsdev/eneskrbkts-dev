@@ -51,11 +51,11 @@ const Iletisim = () => {
           {sent && <div className="success-msg">Gönderildi!</div>}
         </form>
         <div className="iletisim-links">
-          <a href="https://github.com/eneskrbktsdev" target="_blank" rel="noopener noreferrer"><FaGithub /> GitHub</a>
-          <a href="#" className="disable-link"><FaTwitter /> X (Yok)</a>
-          <a href="#" className="disable-link"><FaFacebook /> Facebook (Yok)</a>
-          <div className="mail-link">Mail: <span>mrenes24_24@hotmail.com</span></div>
-        </div>
+		  <a href="https://github.com/eneskrbktsdev" target="_blank" rel="noopener noreferrer"><FaGithub /> GitHub</a>
+		  <a href="https://x.com/" target="_blank" rel="noopener noreferrer" className="disable-link"><FaTwitter /> X (Yok)</a>
+		  <a href="https://facebook.com/" target="_blank" rel="noopener noreferrer" className="disable-link"><FaFacebook /> Facebook (Yok)</a>
+		  <div className="mail-link">Mail: <span>mrenes24_24@hotmail.com</span></div>
+		</div>
       </div>
     </section>
   );
